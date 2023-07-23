@@ -46,8 +46,11 @@ export default function MovieDetails() {
   //  хук useParams повертає всі обєкт де є всі динамічні параматри
   // const params = useParams();
   // const id = params.id;
-  const scrollTo = () => myRef.current?.scrollIntoView();
 
+  const scrollTo = () =>
+    setTimeout(() => {
+      myRef.current?.scrollIntoView();
+    }, 1000);
   // run this function from an event handler or an effect to execute scroll
 
   useEffect(() => {

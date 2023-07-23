@@ -31,7 +31,6 @@ export const ContextDataProvider = ({ children }) => {
   return (
     <Context.Provider
       value={{
-        greeting: 'Hello from context',
         theme,
         toggleTheme,
         themeColor: {
