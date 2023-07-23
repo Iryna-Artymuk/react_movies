@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import { Form } from './StyledForm';
 import { Input } from './StyledForm';
 import Button from '../Button/Button';

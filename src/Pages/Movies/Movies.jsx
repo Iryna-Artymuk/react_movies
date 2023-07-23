@@ -11,7 +11,7 @@ const Movies = () => {
   const [movies, setMovies] = useState([]);
   // console.log('movies: ', movies);
   const [error, setError] = useState(null);
-  const [page, setPage] = useState(1);
+  const [page] = useState(1);
   const getValue = inputValue => {
     setSearchparams({ query: inputValue });
   };
