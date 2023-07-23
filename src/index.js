@@ -6,17 +6,20 @@ import { theme } from './Theme';
 import { StyleSheetManager, ThemeProvider } from 'styled-components';
 import { BrowserRouter } from 'react-router-dom';
 import { GlobalStyle } from './GlobalStyles';
+import { ContextDataProvider } from 'components/Context/Context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <BrowserRouter basename="/react_movies">
-        <StyleSheetManager shouldForwardProp={isPropValid}>
-          <App />
-        </StyleSheetManager>
-      </BrowserRouter>
+      <ContextDataProvider>
+        <GlobalStyle />
+        <BrowserRouter basename="react_movies">
+          <StyleSheetManager shouldForwardProp={isPropValid}>
+            <App />
+          </StyleSheetManager>
+        </BrowserRouter>
+      </ContextDataProvider>
     </ThemeProvider>
   </React.StrictMode>
 );

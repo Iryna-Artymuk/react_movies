@@ -5,8 +5,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
     
-    /* background: ${props => props.theme.themeLight.background}; */
-background: #d8c9c9;
+
 
     }
 main {

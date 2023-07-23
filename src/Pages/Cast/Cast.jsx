@@ -11,6 +11,7 @@ import {
   CardSubtitle,
   CardTitle,
   List,
+  Wrapper,
 } from './StyledCast';
 
 export default function Cast() {
@@ -44,8 +45,10 @@ export default function Cast() {
               <CardAvatar
                 img={`${baseUrlImg}${actor.profile_path} `}
               ></CardAvatar>
-              <CardTitle> Name: {actor.name}</CardTitle>
-              <CardSubtitle> character: {actor.character}</CardSubtitle>
+              <Wrapper>
+                <CardTitle> Name: {actor.name}</CardTitle>
+                <CardSubtitle> character: {actor.character}</CardSubtitle>
+              </Wrapper>
             </CardInfo>
             {/* <ul className="card-social">
             <li className="card-social__item">

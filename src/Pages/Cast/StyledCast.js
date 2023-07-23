@@ -71,6 +71,12 @@ export const CardAvatar = styled.div`
 //    }
 
 /*Text*/
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+`;
 export const CardTitle = styled.div`
   color: ${props => props.theme.themeLight.primary_color};
   font-size: 1.5em;

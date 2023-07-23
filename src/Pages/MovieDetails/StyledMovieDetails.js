@@ -77,7 +77,7 @@ export const Details = styled.div`
 
 export const Title1 = styled.div`
   color: ${props => props.theme.themeLight.primary_color};
-  font-size: 44px;
+  font-size: 35px;
   margin-bottom: 13px;
   position: relative;
   text-align: center;
@@ -171,5 +171,4 @@ export const StyledLink = styled(NavLink)`
     display: inline-block;
     pointer-events: none;
   } */
- 
 `;
