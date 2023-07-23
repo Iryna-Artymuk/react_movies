@@ -3,7 +3,7 @@ import Form from '../../components/Forms/SearchForm';
 import MoviesList from '../../components/MoviesList/MoviesList';
 import { GetData } from '../../Services/MoviesAPI';
 import { useSearchParams } from 'react-router-dom';
-import ErrorPage from '../../cnpm omponents/ErrorPage/ErrorPage';
+import ErrorPage from '../../components/ErrorPage/ErrorPage';
 
 const Movies = () => {
   const [searchParams, setSearchparams] = useSearchParams();

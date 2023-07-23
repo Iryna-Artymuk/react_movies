@@ -12,7 +12,7 @@ root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <BrowserRouter basename="/react_movies">
+      <BrowserRouter>
         <StyleSheetManager shouldForwardProp={isPropValid}>
           <App />
         </StyleSheetManager>
