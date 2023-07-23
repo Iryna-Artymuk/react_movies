@@ -1,7 +1,7 @@
 export default function ArrowBackSVG() {
   return (
     <svg
-      style={{ position: 'relative', zIndex: 5 }}
+      style={{ position: 'fixed', zIndex: 5 }}
       fill="#ce0000"
       xmlns="http://www.w3.org/2000/svg"
       width="40"

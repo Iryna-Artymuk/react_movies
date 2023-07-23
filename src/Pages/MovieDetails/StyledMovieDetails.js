@@ -171,4 +171,5 @@ export const StyledLink = styled(NavLink)`
     display: inline-block;
     pointer-events: none;
   } */
+ 
 `;
