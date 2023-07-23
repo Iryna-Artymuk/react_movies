@@ -49,7 +49,7 @@ export default function MovieDetails() {
 
   const scrollTo = () =>
     setTimeout(() => {
-      myRef.current?.scrollIntoView();
+      myRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, 1000);
   // run this function from an event handler or an effect to execute scroll
 
