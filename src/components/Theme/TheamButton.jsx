@@ -7,15 +7,15 @@ import { MoonSVG } from '../SVG/MoonSVG';
 import { ThemeContext } from 'styled-components';
 
 export default function ChangeThemeButton() {
-  // const { toggleTheme } = useContextData();
+  const { toggleTheme } = useContextData();
   // const { userTheme } = useContextData();
-  // console.log('userTheme: ', userTheme);
-  const themeContext = useContext(ThemeContext);
+
+  // const themeContext = useContext(ThemeContext);
   // console.log('themeContext : ', themeContext);
   const handleChange = () => {
-    themeContext.changeTheme();
-    console.log(themeContext.userTheme);
- 
+    // themeContext.changeTheme();
+    // console.log(themeContext.userTheme);
+    toggleTheme();
   };
   return (
     <>

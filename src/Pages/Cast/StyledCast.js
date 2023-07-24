@@ -78,14 +78,14 @@ export const Wrapper = styled.div`
   gap: 15px;
 `;
 export const CardTitle = styled.div`
-  color: ${props => props.theme.themeLight.primary_color};
+  color: ${props => props.theme.primary_color};
   font-size: 1.5em;
   font-weight: 500;
   line-height: 2rem;
 `;
 
 export const CardSubtitle = styled.div`
-  color: ${props => props.theme.themeLight.secondary_color};
+  color: ${props => props.theme.secondary_color};
   font-size: 1em;
   font-weight: 500;
   line-height: 1rem;

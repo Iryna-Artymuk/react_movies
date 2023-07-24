@@ -24,11 +24,6 @@ export const ContextDataProvider = ({ children }) => {
   document.body.style.color = color;
   document.body.style.backgroundColor = backgroundColor;
 
-  // document.header.style.backgroundColor = headerbackground;
-  // const wrapper =document.getElementsByClassName(".InfiniteScrollWrapper")
-  // console.log('wrapper: ', wrapper);
-  // wrapper.style.backgroundColor = backgroundColor;
-  // wrapper.style.color = color;
   return (
     <Context.Provider
       value={{

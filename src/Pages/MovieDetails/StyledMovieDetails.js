@@ -74,7 +74,7 @@ export const Details = styled.div`
 
 export const Title1 = styled.div`
   color: ${props => {
-    console.log('props: ', props);
+    // console.log('props: ', props);
 
     return props.theme.primary_color;
   }};
