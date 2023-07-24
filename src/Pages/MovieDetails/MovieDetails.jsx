@@ -48,6 +48,9 @@ export default function MovieDetails() {
   // const id = params.id;
 
   const scrollTo = () =>
+    // запит на бек асинхроний, а скрол синхрона функція)
+    // Тобто спочатку спрацьовує скрол, а потім йде запит до беку. Так як скролити нема чого, воно і не скролить)
+    // в функції scrollTo зроби відкладену функцію за допомогою setTimeout
     setTimeout(() => {
       myRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, 1000);
