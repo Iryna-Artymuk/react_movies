@@ -20,6 +20,8 @@ export const Form = styled.form`
     0 10px 15px 0 rgba(126, 126, 126, 0.12),
     0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
     0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
+
+ 
 `;
 export const Input = styled.input`
   width: 90%;

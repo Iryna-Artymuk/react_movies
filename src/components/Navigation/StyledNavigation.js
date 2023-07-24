@@ -13,7 +13,7 @@ export const List = styled.ul`
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding: 10px;
+  /* padding: 10px; */
   /* li {
     width: 100%;
     position: relative;
@@ -45,9 +45,9 @@ export const StyledNavLink = styled(NavLink)`
     border-radius: 3px;
     background: ${props => props.theme.themeLight.secondary_color};
   }
-  &.active {
+  /* &.active {
     display: inline-block;
     pointer-events: none;
     /* opacity: 0.5; */
-  }
+  /* } */
 `;

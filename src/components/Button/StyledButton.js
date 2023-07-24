@@ -4,7 +4,7 @@ export const StyledButton = styled.button`
   background: ${props => props.theme.themeLight.background};
   color: ${props => props.theme.themeLight.secondary_color};
   display: block;
-  width: 100px;
+  min-width: 100px;
   height: 30px;
   /* border: 2px solid ${props => props.theme.themeLight.primary_color}; */
   border: none;

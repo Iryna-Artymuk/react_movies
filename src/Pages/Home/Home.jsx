@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { GetData } from '../../Services/MoviesAPI';
-
+import ErrorPage from '../../components/ErrorPage/ErrorPage';
 import MoviesList from 'components/MoviesList/MoviesList';
-import ErrorPage from 'components/ErrorPage/ErrorPage';
+import Loader from 'components/Loader/Loader';
 
 export default function Home() {
   const [movies, setMovies] = useState([]);
-  // console.log('movies: ', movies);
+
   const [error, setError] = useState(null);
-  // console.log('error: ', error);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     const getMovies = async () => {
       try {
+        setLoading(prevState => !prevState);
         const { results } = await GetData.fetchTrendingMovies();
         // console.log('results: ', results);
 
@@ -20,13 +21,16 @@ export default function Home() {
         setError(Error);
         console.log(Error.message);
       } finally {
-        // setLoading(false);
+        setLoading(prevState => !prevState);
       }
     };
     getMovies();
   }, []);
 
   return (
-    <>{error ? <ErrorPage error={error} /> : <MoviesList movies={movies} />}</>
+    <>
+      {loading && <Loader />}
+      {error ? <ErrorPage error={error} /> : <MoviesList movies={movies} />}
+    </>
   );
 }
