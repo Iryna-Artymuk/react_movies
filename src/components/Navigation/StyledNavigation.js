@@ -21,8 +21,8 @@ export const List = styled.ul`
 `;
 export const StyledNavLink = styled(NavLink)`
   position: relative;
-  background: ${props => props.theme.themeLight.background};
-  color: ${props => props.theme.themeLight.secondary_color};
+  background: ${props => props.theme.background};
+  color: ${props => props.theme.secondary_color};
   display: block;
   width: 100px;
   border-radius: 10px;
@@ -33,7 +33,7 @@ export const StyledNavLink = styled(NavLink)`
   text-align: center;
   cursor: pointer;
   &:hover {
-    color: ${props => props.theme.themeLight.primary_color};
+    color: ${props => props.theme.primary_color};
   }
   &.active:before {
     content: '';
@@ -43,7 +43,7 @@ export const StyledNavLink = styled(NavLink)`
     bottom: -5px;
     left: 0;
     border-radius: 3px;
-    background: ${props => props.theme.themeLight.secondary_color};
+    background: ${props => props.theme.secondary_color};
   }
   /* &.active {
     display: inline-block;

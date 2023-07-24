@@ -6,8 +6,5 @@ export const StyledList = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-top: ${props => {
-    console.log('props', props);
-    return props.$SearchMoviesList ? '10px' : '100px';
-  }};
+  margin-top: 100px;
 `;

@@ -25,7 +25,7 @@ export const Card = styled.div`
   }
   p {
     font-size: 40px;
-    color: ${props => props.theme.themeLight.primary_color};
+    color: ${props => props.theme.primary_color};
     font-weight: 700;
     text-align: center;
     margin-top: 30px;
@@ -76,6 +76,6 @@ export const Backdrop = styled.div.attrs(props => ({
     width: 100%;
     height: 100%;
     /* background-size: cover; */
-  /* background: ${props => props.theme.themeLight.background}; */
+  /* background: ${props => props.theme.background}; */
   /* } */
 `;

@@ -10,15 +10,16 @@ export const useContextData = () => useContext(Context);
 // Щоразу, коли оновиться значення контексту, залежний компонент ре-рендерується з новим значенням.
 
 export const ContextDataProvider = ({ children }) => {
-  const [theme, setTheme] = useState('light');
-  console.log('theme: ', theme);
+  const [userTheme, setTheme] = useState('light');
 
   const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    setTheme(userTheme === 'light' ? 'dark' : 'light');
   };
   const color =
-    theme === 'light' ? props => props.theme.themeLight.primary_color : '#FFF';
-  const backgroundColor = theme === 'light' ? ' #d8c9c9' : '#333';
+    userTheme === 'light'
+      ? props => props.theme.themeLight.primary_color
+      : '#FFF';
+  const backgroundColor = userTheme === 'light' ? ' #d8c9c9' : '#333';
 
   document.body.style.color = color;
   document.body.style.backgroundColor = backgroundColor;
@@ -31,21 +32,14 @@ export const ContextDataProvider = ({ children }) => {
   return (
     <Context.Provider
       value={{
-        theme,
+        userTheme,
         toggleTheme,
-        themeColor: {
-          color: theme === 'light' ? '#333' : '#FFF',
-          backgroundColor: theme === 'light' ? '#FFF' : '#333',
-        },
       }}
     >
       {children}
     </Context.Provider>
   );
 };
-
-// type Theme = "light" | "dark";
-// type ThemeContext = { theme: Theme; toggleTheme: () => void };
 
 // export const ThemeContext = React.createContext<ThemeContext>(
 //   {} as ThemeContext
