@@ -21,7 +21,9 @@ export const List = styled.ul`
 `;
 export const StyledNavLink = styled(NavLink)`
   position: relative;
-  background: ${props => props.theme.background};
+  background: ${props => {
+    return props.theme.background;
+  }};
   color: ${props => props.theme.secondary_color};
   display: block;
   width: 100px;

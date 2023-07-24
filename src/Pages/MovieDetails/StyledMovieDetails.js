@@ -51,11 +51,8 @@ export const StyledHero = styled.div`
     top: 0;
     left: 0;
     z-index: 3;
-    background: linear-gradient(
-      -180deg,
-      rgba(255, 255, 255, 0.5) 0%,
-      rgba(0, 0, 0, 0.5) 100%
-    );
+    background: ${props => props.theme.background};
+
     transform: skewY(-2.2deg);
     transform-origin: 0 0;
   }
@@ -72,14 +69,14 @@ export const Details = styled.div`
   align-items: center;
   padding: 20px;
   z-index: 4;
-  color: ${props => props.theme.themeLight.primarycolor};
+  color: ${props => props.theme.primarycolor};
 `;
 
 export const Title1 = styled.div`
   color: ${props => {
     console.log('props: ', props);
 
-    return props.theme.themeLight.primary_color;
+    return props.theme.primary_color;
   }};
   font-size: 35px;
   margin-bottom: 13px;
@@ -90,7 +87,7 @@ export const Title1 = styled.div`
 //     }
 
 export const Title2 = styled.div`
-  color: ${props => props.theme.themeLight.secondary_color};
+  color: ${props => props.theme.secondary_color};
   font-size: 23px;
   font-weight: 300;
   margin-bottom: 15px;
@@ -99,7 +96,7 @@ export const Title2 = styled.div`
 
 export const Description = styled.div`
   bottom: 0px;
-  color: ${props => props.theme.themeLight.text_color};
+  color: ${props => props.theme.text_color};
   font-size: 16px;
   line-height: 26px;
 
@@ -114,8 +111,8 @@ export const Genres = styled.div`
   justify-content: center;
   text-align: center;
   span {
-    background: ${props => props.theme.themeLight.background};
-    color: ${props => props.theme.themeLight.secondary_color};
+    background: ${props => props.theme.background};
+    color: ${props => props.theme.secondary_color};
     border-radius: 10px;
     padding: 3px 8px;
     font-size: 14px;
@@ -144,9 +141,9 @@ export const StyledLink = styled(NavLink)`
   background: ${props => {
     // console.log('prop: ', props);
 
-    return props.theme.themeLight.background;
+    return props.theme.background;
   }};
-  color: ${props => props.theme.themeLight.secondary_color};
+  color: ${props => props.theme.secondary_color};
   display: block;
 
   width: 100px;
@@ -158,7 +155,7 @@ export const StyledLink = styled(NavLink)`
   text-align: center;
   cursor: pointer;
   &:hover {
-    color: ${props => props.theme.themeLight.primary_color};
+    color: ${props => props.theme.primary_color};
   }
   &.active:before {
     content: '';
@@ -168,7 +165,7 @@ export const StyledLink = styled(NavLink)`
     bottom: -5px;
     left: 0;
     border-radius: 3px;
-    background: ${props => props.theme.themeLight.primary_color};
+    background: ${props => props.theme.primary_color};
     /* display: ${props => (props.$Goback ? 'block' : 'none')}; */
   }
   /* &.active {

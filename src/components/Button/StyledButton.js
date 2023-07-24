@@ -1,12 +1,12 @@
 import { styled } from 'styled-components';
 
 export const StyledButton = styled.button`
-  background: ${props => props.theme.themeLight.background};
-  color: ${props => props.theme.themeLight.secondary_color};
+  background: ${props => props.theme.background};
+  color: ${props => props.theme.secondary_color};
   display: block;
   min-width: 100px;
   height: 30px;
-  /* border: 2px solid ${props => props.theme.themeLight.primary_color}; */
+  /* border: 2px solid ${props => props.theme.primary_color}; */
   border: none;
   border-radius: 10px;
   padding: 5px 10px;
@@ -19,9 +19,9 @@ export const StyledButton = styled.button`
   text-align: center;
   cursor: pointer;
   &:hover svg {
-    fill: ${props => props.theme.themeLight.primary_color};
+    fill: ${props => props.theme.primary_color};
   }
   svg {
-    fill: ${props => props.theme.themeLight.secondary_color};
+    fill: ${props => props.theme.secondary_color};
   }
 `;

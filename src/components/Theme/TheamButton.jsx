@@ -15,6 +15,7 @@ export default function ChangeThemeButton() {
   const handleChange = () => {
     themeContext.changeTheme();
     console.log(themeContext.userTheme);
+ 
   };
   return (
     <>

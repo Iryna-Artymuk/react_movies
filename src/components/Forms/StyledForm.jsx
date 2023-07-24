@@ -20,8 +20,6 @@ export const Form = styled.form`
     0 10px 15px 0 rgba(126, 126, 126, 0.12),
     0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
     0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
-
- 
 `;
 export const Input = styled.input`
   width: 90%;
@@ -29,7 +27,7 @@ export const Input = styled.input`
   padding-left: 15px;
   border: none;
   border-radius: 6px;
-  color: ${props => props.theme.themeLight.primary_color};
+  color: ${props => props.theme.primary_color};
   font-size: 18px;
   font-weight: 500;
   /* background-color: #fffbf8; */
@@ -44,10 +42,10 @@ export const Input = styled.input`
     0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
 
   &:focus {
-    outline: 2px solid ${props => props.theme.themeLight.primary_color};
+    outline: 2px solid ${props => props.theme.primary_color};
   }
   &::placeholder {
-    /* color: ${props => props.theme.themeLight.primary_color}; */
+    /* color: ${props => props.theme.primary_color}; */
     font-size: 18px;
     font-weight: 500;
   }
