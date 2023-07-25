@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+// import React, { useContext } from 'react';
 import { useContextData } from '../Context/Context';
 import css from './Theam.module.css';
 
 import { SunSVG } from '../SVG/SunSVG';
 import { MoonSVG } from '../SVG/MoonSVG';
-import { ThemeContext } from 'styled-components';
+// import { ThemeContext } from 'styled-components';
 
 export default function ChangeThemeButton() {
   const { toggleTheme } = useContextData();
@@ -12,6 +12,7 @@ export default function ChangeThemeButton() {
 
   // const themeContext = useContext(ThemeContext);
   // console.log('themeContext : ', themeContext);
+
   const handleChange = () => {
     // themeContext.changeTheme();
     // console.log(themeContext.userTheme);

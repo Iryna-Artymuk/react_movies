@@ -11,16 +11,16 @@ export const useContextData = () => useContext(Context);
 
 export const ContextDataProvider = ({ children }) => {
   const [userTheme, setTheme] = useState('light');
+  console.log('userTheme: ', userTheme);
 
   const toggleTheme = () => {
     setTheme(userTheme === 'light' ? 'dark' : 'light');
   };
-  const color =
-    userTheme === 'light'
-      ? props => props.theme.themeLight.primary_color
-      : '#FFF';
-  const backgroundColor = userTheme === 'light' ? ' #d8c9c9' : '#333';
 
+  const color =
+    userTheme === 'light' ? props => props.theme.primary_color : '#FFF';
+  const backgroundColor = userTheme === 'light' ? ' #d8c9c9' : '#333';
+  // ' #d8c9c9'
   document.body.style.color = color;
   document.body.style.backgroundColor = backgroundColor;
 
