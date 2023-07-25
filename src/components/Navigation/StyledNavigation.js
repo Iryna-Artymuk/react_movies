@@ -21,10 +21,8 @@ export const List = styled.ul`
 `;
 export const StyledNavLink = styled(NavLink)`
   position: relative;
-  background: ${props => {
-    return props.theme.background;
-  }};
-  color: ${props => props.theme.secondary_color};
+  background: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.text_color};
   display: block;
   width: 100px;
   border-radius: 10px;
@@ -35,7 +33,7 @@ export const StyledNavLink = styled(NavLink)`
   text-align: center;
   cursor: pointer;
   &:hover {
-    color: ${props => props.theme.primary_color};
+    color: ${({ theme }) => theme.colors.secondary_color};
   }
   &.active:before {
     content: '';
@@ -45,7 +43,7 @@ export const StyledNavLink = styled(NavLink)`
     bottom: -5px;
     left: 0;
     border-radius: 3px;
-    background: ${props => props.theme.secondary_color};
+    background: ${({ theme }) => theme.colors.primary_color};
   }
   /* &.active {
     display: inline-block;

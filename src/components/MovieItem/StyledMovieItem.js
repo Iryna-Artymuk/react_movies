@@ -17,15 +17,14 @@ export const Card = styled.div`
   transform: ${() => setRotationPlus()};
   transform-style: preserve-3d;
   transition: transform 1s;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  color: ${({ theme }) => theme.colors.box_shadow};
   overflow: hidden;
   &:hover {
     transform: ${() => setRotationMinus()};
   }
   p {
     font-size: 40px;
-    color: ${props => props.theme.primary_color};
+    color: ${({ theme }) => theme.colors.primary_color};
     font-weight: 700;
     text-align: center;
     margin-top: 30px;

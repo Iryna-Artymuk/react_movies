@@ -12,7 +12,7 @@ export const StyledContainer = styled.div`
   margin: 0 auto;
   width: 100%;
   height: 100%;
-  background: #f0f0ed;
+  background: ${({ theme }) => theme.colors.background};
   border-radius: 5px;
   position: relative;
 `;
@@ -34,8 +34,7 @@ export const StyledHero = styled.div`
     top: 0;
     left: 0;
     background-image: ${props => {
-      // console.log('props : ', props);
-
+      console.log('props.img}: ', props.img);
       return `url(${props.img})`;
     }};
     background-size: cover;
@@ -51,7 +50,6 @@ export const StyledHero = styled.div`
     top: 0;
     left: 0;
     z-index: 3;
-    background: ${props => props.theme.background};
 
     transform: skewY(-2.2deg);
     transform-origin: 0 0;
@@ -69,15 +67,11 @@ export const Details = styled.div`
   align-items: center;
   padding: 20px;
   z-index: 4;
-  color: ${props => props.theme.primarycolor};
+  color: ${({ theme }) => theme.colors.primary_color};
 `;
 
 export const Title1 = styled.div`
-  color: ${props => {
-    // console.log('props: ', props);
-
-    return props.theme.primary_color;
-  }};
+  color: ${({ theme }) => theme.colors.primary_color};
   font-size: 35px;
   margin-bottom: 13px;
   position: relative;
@@ -87,7 +81,7 @@ export const Title1 = styled.div`
 //     }
 
 export const Title2 = styled.div`
-  color: ${props => props.theme.secondary_color};
+  color: ${({ theme }) => theme.colors.text_color};
   font-size: 23px;
   font-weight: 300;
   margin-bottom: 15px;
@@ -96,7 +90,7 @@ export const Title2 = styled.div`
 
 export const Description = styled.div`
   bottom: 0px;
-  color: ${props => props.theme.text_color};
+  color: ${({ theme }) => theme.colors.text_color};
   font-size: 16px;
   line-height: 26px;
 
@@ -111,8 +105,8 @@ export const Genres = styled.div`
   justify-content: center;
   text-align: center;
   span {
-    background: ${props => props.theme.background};
-    color: ${props => props.theme.secondary_color};
+    background: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.text_color};
     border-radius: 10px;
     padding: 3px 8px;
     font-size: 14px;
@@ -138,12 +132,8 @@ export const StyledLinkWrapper = styled.div`
 `;
 export const StyledLink = styled(NavLink)`
   position: relative;
-  background: ${props => {
-    // console.log('prop: ', props);
-
-    return props.theme.background;
-  }};
-  color: ${props => props.theme.secondary_color};
+  background: ${({ theme }) => theme.colors.secondary_color};
+  color: ${({ theme }) => theme.colors.text_color};
   display: block;
 
   width: 100px;
@@ -155,7 +145,7 @@ export const StyledLink = styled(NavLink)`
   text-align: center;
   cursor: pointer;
   &:hover {
-    color: ${props => props.theme.primary_color};
+    background: ${({ theme }) => theme.colors.primary_color};
   }
   &.active:before {
     content: '';
@@ -165,7 +155,7 @@ export const StyledLink = styled(NavLink)`
     bottom: -5px;
     left: 0;
     border-radius: 3px;
-    background: ${props => props.theme.primary_color};
+    background: ${({ theme }) => theme.colors.primary_color};
     /* display: ${props => (props.$Goback ? 'block' : 'none')}; */
   }
   /* &.active {

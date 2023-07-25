@@ -1,6 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+body{
+  background-color: ${({ theme }) => {
+    // console.log(' theme: ',  theme);
+
+    return theme.colors.body_background;
+  }};
+}
 main {
   background: inherit;
 }
@@ -54,6 +61,13 @@ margin:0;
 img {
   max-width: 100%;
   height: auto;
+}
+
+.light {
+  background-color: hsl(0, 0%, 93%);
+}
+.dark {
+  background-color: hsl(0, 0%, 20%);
 }
 
 `;

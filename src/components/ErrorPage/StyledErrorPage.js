@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: ${props => props.theme.themeLight.primary_color};
+    color: ${({ theme }) => theme.colors.primary_color};
     font-size: 30px;
     animation: type 0.5s alternate infinite;
   }

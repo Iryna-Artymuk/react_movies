@@ -11,11 +11,7 @@ export const Card = styled.div`
   --size: 200px;
   width: var(--size);
   height: var(--size);
-  background: linear-gradient(
-    -180deg,
-    rgba(255, 255, 255, 0.5) 0%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
+  color: ${({ theme }) => theme.colors.background};
   padding: 2rem 1.5rem;
   transition: box-shadow 0.3s ease, transform 0.2s ease;
   &:hover {
@@ -78,14 +74,14 @@ export const Wrapper = styled.div`
   gap: 15px;
 `;
 export const CardTitle = styled.div`
-  color: ${props => props.theme.primary_color};
+  color: ${({ theme }) => theme.colors.primary_color};
   font-size: 1.5em;
   font-weight: 500;
   line-height: 2rem;
 `;
 
 export const CardSubtitle = styled.div`
-  color: ${props => props.theme.secondary_color};
+  color: ${({ theme }) => theme.colors.secondary_color};
   font-size: 1em;
   font-weight: 500;
   line-height: 1rem;

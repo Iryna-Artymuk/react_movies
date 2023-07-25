@@ -24,6 +24,6 @@ export const Header = styled.header`
   align-items: center;
   height: 80px;
   /* border-radius: 5px; */
-  background: ${props => props.theme.primary_color};
-  box-shadow: ${props => props.boxShadow};
+  background: ${({ theme }) => theme.colors.secondary_color};
+  box-shadow: ${({ theme }) => theme.colors.box_shadow};
 `;

@@ -4,12 +4,12 @@ import Navigation from '../Navigation/Navigation';
 import ChangeThemeButton from 'components/Theme/TheamButton';
 // console.log('ChangeThemeButton : ', ChangeThemeButton);
 
-function Layout({ children }) {
+function Layout({ children, HandleThemeChange }) {
   return (
     <>
       <Container>
         <Header id="header">
-          <ChangeThemeButton />
+          <ChangeThemeButton HandleThemeChange={HandleThemeChange} />
           <Navigation></Navigation>
         </Header>
         {children}

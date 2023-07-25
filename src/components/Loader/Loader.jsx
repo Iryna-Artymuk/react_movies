@@ -6,7 +6,7 @@ const Loader = () => (
       margin: '0 auto',
       height: '20%',
       width: '20%',
-      fill: 'red ',
+      fill: `${({ theme }) => theme.colors.primary_color}`,
       borderRadius: 3,
     }}
     type={'cylon'}

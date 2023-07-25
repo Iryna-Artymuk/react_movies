@@ -13,26 +13,20 @@ import { styled } from 'styled-components';
 //    }
 
 export const Review = styled.article`
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --clr-white: #fff;
-  --transition: all 0.3s linear;
-  --radius: 0.25rem;
   position: relative;
-  background: var(--clr-white);
+  background: ${({ theme }) => theme.colors.background};
   padding: 1.5rem 2rem;
-  border-radius: var(--radius);
-  box-shadow: var(--light-shadow);
-  transition: var(--transition);
+  border-radius: 3px;
+  box-shadow: ${({ theme }) => theme.colors.box_shadow};
+
   text-align: center;
 
   &:hover {
-    box-shadow: var(--dark-shadow);
+    box-shadow: ${({ theme }) => theme.colors.box_shadow};
   }
 `;
 
 export const ImgContainer = styled.div`
-  --clr-primary-5: ${props => props.theme.themeLight.primary_color};
   position: relative;
   width: 150px;
   height: 150px;
@@ -44,7 +38,7 @@ export const ImgContainer = styled.div`
     content: '';
     width: 100%;
     height: 100%;
-    background: var(--clr-primary-5);
+    background: ${({ theme }) => theme.colors.primary_color};
     position: absolute;
     top: -0.25rem;
     right: -0.5rem;
@@ -61,8 +55,7 @@ export const PersonImage = styled.img`
 `;
 export const QuoteIcon = styled.span`
   /* primary/main color */
-  --clr-primary-5: ${props => props.theme.themeLight.primary_color};
-  --clr-white: #fff;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -72,18 +65,17 @@ export const QuoteIcon = styled.span`
   place-items: center;
   border-radius: 50%;
   transform: translateY(25%);
-  background: var(--clr-primary-5);
-  color: var(--clr-white);
+  background: ${({ theme }) => theme.colors.primary_color};
+  color: ${({ theme }) => theme.colors.text_color};
 `;
 
 export const Author = styled.h4`
   margin-bottom: 0.25rem;
 `;
 export const PostData = styled.p`
-  --clr-primary-5: ${props => props.theme.themeLight.primary_color};
   margin-bottom: 0.5rem;
   text-transform: uppercase;
-  color: var(--clr-primary-5);
+  color: ${({ theme }) => theme.colors.primary_color};
   font-size: 0.85rem;
 `;
 export const ReviewContext = styled.div`
@@ -91,45 +83,38 @@ export const ReviewContext = styled.div`
     margin-bottom: 0.75rem;
     max-height: 200px;
     overflow: auto;
+    color: ${({ theme }) => theme.colors.text_color};
   }
   scrollbar-color: red yellow;
 `;
 export const PrevButton = styled.button`
-  --clr-primary-5: ${props => props.theme.themeLight.primary_color};
-
-  color: var(--clr-primary-5);
+  color: ${({ theme }) => theme.colors.text_color};
   font-size: 1.25rem;
   background: transparent;
   border-color: transparent;
   margin: 0 0.5rem;
-  transition: var(--transition);
-  cursor: pointer;
+  /* transition:${({ theme }) => theme.colors.primary_color}; */
   &:hover {
-    color: var(--clr-primary-5);
+    color: ${({ theme }) => theme.colors.primary_color};
   }
 `;
 export const NextButton = styled.button`
-  --clr-primary-5: ${props => props.theme.themeLight.primary_color};
-  --clr-primary-7: hsl(205, 90%, 76%);
-  color: var(--clr-primary-5);
+  color: ${({ theme }) => theme.colors.text_color};
   font-size: 1.25rem;
   background: transparent;
   border-color: transparent;
   margin: 0 0.5rem;
-  transition: var(--transition);
+
   cursor: pointer;
   &:hover {
-    color: grey;
+    color: ${({ theme }) => theme.colors.primary_color};
   }
 `;
 
 export const RandomBtn = styled.button`
-  --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-5: ${props => props.theme.themeLight.primary_color};
-  --clr-primary-10: ${props => props.theme.themeLight.background};
   margin-top: 0.5rem;
-  background: var(--clr-primary-10);
-  color: var(--clr-primary-5);
+  background: ${({ theme }) => theme.colors.secondary_color};
+  color: ${({ theme }) => theme.colors.text_color};
   padding: 0.25rem 0.5rem;
   text-transform: capitalize;
   border-radius: 0.25rem;
@@ -137,12 +122,12 @@ export const RandomBtn = styled.button`
   border-color: transparent;
   cursor: pointer;
   &:hover {
-    background: var(--clr-primary-5);
-    color: var(--clr-primary-1);
+    background: ${({ theme }) => theme.colors.primary_color};
+    color: ${({ theme }) => theme.colors.text_color};
   }
 `;
 export const ReviewCount = styled.div`
-  color: ${props => props.theme.themeLight.primary_color};
+  color: ${({ theme }) => theme.colors.text_color};
   position: absolute;
   top: 8px;
   left: 21px;

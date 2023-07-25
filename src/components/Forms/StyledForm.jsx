@@ -27,7 +27,7 @@ export const Input = styled.input`
   padding-left: 15px;
   border: none;
   border-radius: 6px;
-  color: ${props => props.theme.primary_color};
+  color: ${({ theme }) => theme.colors.primary_color};
   font-size: 18px;
   font-weight: 500;
   /* background-color: #fffbf8; */
@@ -42,10 +42,10 @@ export const Input = styled.input`
     0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
 
   &:focus {
-    outline: 2px solid ${props => props.theme.primary_color};
+    outline: 2px solid ${({ theme }) => theme.colors.primary_color};
   }
   &::placeholder {
-    /* color: ${props => props.theme.primary_color}; */
+    color: ${({ theme }) => theme.colors.primary_color};
     font-size: 18px;
     font-weight: 500;
   }
