@@ -2,27 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import isPropValid from '@emotion/is-prop-valid';
 import App from './App';
-import { theme } from './Theme';
+import { themeLight } from './Theme';
 import { StyleSheetManager, ThemeProvider } from 'styled-components';
 import { BrowserRouter } from 'react-router-dom';
 import { GlobalStyle } from './GlobalStyles';
 import { ContextDataProvider } from 'components/Context/Context';
-
+//  підхід з перемиканням теми у style components.
+// створити об'єкти з однаковими ключами, але різними кольорами. Просто перемикаю ці два об'єкта у ThemeProvider
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <ContextDataProvider>
+    <ContextDataProvider>
+      <ThemeProvider theme={themeLight}>
         <GlobalStyle />
         <BrowserRouter basename="react_movies">
           <StyleSheetManager shouldForwardProp={isPropValid}>
             <App />
           </StyleSheetManager>
         </BrowserRouter>
-      </ContextDataProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </ContextDataProvider>
   </React.StrictMode>
 );
+
+// basename="react_movies"
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
