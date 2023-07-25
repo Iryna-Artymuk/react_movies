@@ -11,12 +11,12 @@ export const Card = styled.div`
   --size: 200px;
   width: var(--size);
   height: var(--size);
-  color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.primary_color};
   padding: 2rem 1.5rem;
+  border-radius: 20px;
   transition: box-shadow 0.3s ease, transform 0.2s ease;
-  &:hover {
-    box-shadow: 0 8px 50px #23232333;
-  }
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 `;
 
 export const CardInfo = styled.div`

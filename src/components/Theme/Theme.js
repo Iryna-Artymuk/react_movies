@@ -44,7 +44,7 @@ export const dark = {
   colors: {
     body_background: '#737171',
     background: '#7a5af5',
-    primary_color: '#a688fa',
+    primary_color: '#ba9ffb',
     secondary_color: '#7b718b',
     text_color: '#fff',
     box_shadow: `rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,rgba(0, 0, 0, 0.09) 0px 32px 16px`,
