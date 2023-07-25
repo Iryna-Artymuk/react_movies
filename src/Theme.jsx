@@ -3,7 +3,7 @@ const Gradient1 = ` linear-gradient(
   rgba(255, 255, 255, 0.5) 0%,
   rgba(0, 0, 0, 0.5) 100%)`;
 // const Gradient2 = `linear-gradient(to right top, #2874e5, #0093d5, #00a2aa, #75a991, #a8ad9d);)`;
-export const themeLight = {
+export const theme = {
   userTheme: 'light',
   changeTheme: function () {
     if (this.userTheme === 'light') {

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import isPropValid from '@emotion/is-prop-valid';
 import App from './App';
-import { themeLight } from './Theme';
+import { theme } from './Theme';
 import { StyleSheetManager, ThemeProvider } from 'styled-components';
 import { BrowserRouter } from 'react-router-dom';
 import { GlobalStyle } from './GlobalStyles';
@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ContextDataProvider>
-      <ThemeProvider theme={themeLight}>
+      <ThemeProvider theme={theme}>
         <GlobalStyle />
         <BrowserRouter basename="react_movies">
           <StyleSheetManager shouldForwardProp={isPropValid}>
