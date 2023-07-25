@@ -1,7 +1,7 @@
-import { lazy, Suspense, useContext } from 'react';
+import { lazy, Suspense,} from 'react';
 import Layout from './components/Layout/Layout';
 import { Route, Routes } from 'react-router-dom';
-import { ThemeContext } from 'styled-components';
+
 
 // import Movies from './Pages/Movies/Movies';
 // import Home from './Pages/Home/Home';
@@ -14,8 +14,7 @@ const Home = lazy(() => import('./Pages/Home/Home'));
 const MovieDetails = lazy(() => import('./Pages/MovieDetails/MovieDetails'));
 // const ErrorPage = lazy(() => import('./Components/ErrorPage/ErrorPage'));
 const App = () => {
-  // const themeContext = useContext(ThemeContext);
-  // console.log('themeContext : ', themeContext);
+
 
   return (
     <Layout>

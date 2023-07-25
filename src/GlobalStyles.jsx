@@ -1,4 +1,3 @@
-import { useContextData } from 'components/Context/Context';
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
