@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+// import ReactDOM from 'react-dom/client';
 import isPropValid from '@emotion/is-prop-valid';
 import { hydrate, render } from 'react-dom';
 import { StyleSheetManager } from 'styled-components';
