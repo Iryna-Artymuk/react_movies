@@ -1,7 +1,8 @@
 import React from 'react';
-// import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
+ import { render } from 'react-snapshot';
 import isPropValid from '@emotion/is-prop-valid';
-import { hydrate, render } from 'react-dom';
+
 import { StyleSheetManager } from 'styled-components';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -23,25 +24,12 @@ import App from './App';
 
 // // basename="react_movies"
 
-// ReactDOM.render(<App />, document.getElementById('root'));
-const rootElement = document.getElementById('root');
 
-if (rootElement.hasChildNodes()) {
-hydrate(
-    <BrowserRouter basename="react_movies">
-      <StyleSheetManager shouldForwardProp={isPropValid}>
-        <App />
-      </StyleSheetManager>
-    </BrowserRouter>,
-    rootElement
-  );
-} else {
- render(
-    <BrowserRouter basename="react_movies">
-      <StyleSheetManager shouldForwardProp={isPropValid}>
-        <App />
-      </StyleSheetManager>
-    </BrowserRouter>,
-    rootElement
-  );
-}
+render(
+  <BrowserRouter basename="react_movies">
+    <StyleSheetManager shouldForwardProp={isPropValid}>
+      <App />
+    </StyleSheetManager>
+  </BrowserRouter>,
+  document.getElementById('root')
+);
